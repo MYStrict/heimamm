@@ -1,0 +1,265 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    // height: 1200px;
+    background-color: #F2F4F7;
+}
+
+// 约束 当屏幕大于750px的时候， html字体大小就不变化了
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 37.5px !important;
+    }
+}
+
+a {
+    color: #707070;
+    text-decoration: none;
+}
+
+.header {
+    height: 1.066667rem;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+    line-height: 1.066667rem;
+    font-size: .466667rem;
+    color: #1C1C1C;
+    background-color: #fff;
+}
+
+.warp {
+    background-color: #fff;
+    padding-bottom: .573333rem;
+}
+
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: .586667rem 0 .8rem 0;
+
+
+    .item {
+        width: 33.3%;
+        display: flex;
+        // 纵向显示
+        flex-direction: column;
+        // 侧轴 居中
+        align-items: center;
+
+        // background-color: pink;
+        // margin-top: .586667rem;
+        // margin-bottom: .346667rem;
+
+        img {
+            width: 1.853333rem;
+            height: 1.853333rem;
+        }
+
+        span {
+            font-size: .333333rem;
+            color: #707070;
+        }
+
+        &:nth-child(-n+3) {
+            margin-bottom: .8rem;
+        }
+    }
+}
+
+.go {
+    margin: 0 .16rem 0 .16rem;
+}
+
+// 就业指导模块
+.content {
+    padding: .533333rem .32rem;
+    background-color: #fff;
+    margin-top: .133333rem;
+
+    .con-hd {
+        display: flex;
+        justify-content: space-between;
+        height: .506667rem;
+        // background-color: pink;
+        line-height: .506667rem;
+        margin-bottom: .533333rem;
+
+        h4 {
+            margin: 0;
+            font-size: .373333rem;
+            color: #333;
+
+            .icon {
+                display: inline-block;
+                width: .506667rem;
+                height: .506667rem;
+                // 添加这个代码可以让后看的文字 垂直居中
+                 
+                vertical-align: middle;
+            } 
+
+        }
+
+
+        .more {
+            font-size: .293333rem;
+            color: #999;
+        }
+
+    }
+
+}
+
+// 轮播图
+.get_job_focus {
+
+    // .get_job_fo {
+        
+    // }
+    position: relative;
+
+    .swiper-container {
+        // width: 100%;
+        height: 100%;
+        width: 7.2rem;
+        // background-color: pink;
+    }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+
+        // 未选中的 缩放0.8
+        transform: scale(0.8);
+        opacity: 0.4;
+        
+        a {
+            width: 4.506667rem;
+            height: 5.013333rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p {
+            width: 4.506667rem;
+            font-size: .333333rem;
+            margin-top: .32rem;
+        }
+
+      }
+
+    //   当前选中的slider 中间那个
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active{
+        z-index: 999;
+        transform: scale(1);
+        opacity: 1.0;
+    }
+
+}
+
+// 学习模块的轮播图
+.study {
+    .study_fo {
+        padding: .133333rem;
+    }
+    .swiper-slide {
+        // text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        // 修改大小
+        width: 3.866667rem;
+        height: 4.533333rem;
+        // background-color: pink;
+        border-radius: .133333rem;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+
+        /* Center slide text vertically */
+        // display: -webkit-box;
+        // display: -ms-flexbox;
+        // display: -webkit-flex;
+        // display: flex;
+        // -webkit-box-pack: center;
+        // -ms-flex-pack: center;
+        // -webkit-justify-content: center;
+        // justify-content: center;
+        // -webkit-box-align: center;
+        // -ms-flex-align: center;
+        // -webkit-align-items: center;
+        // align-items: center;
+
+        h5 {
+            margin: .266667rem 0;
+            font-size: .4rem;
+            font-weight: 400;
+            padding: 0 .133333rem;
+        }
+
+        span {
+           font-size: .346667rem;
+           color: #FF4400; 
+        }
+
+        p {
+            font-size: .346667rem;
+            color: #999999;
+            padding: 0 .133333rem;
+        }
+    }
+
+
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 1.52rem;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10000;
+
+    padding: .266667rem;
+    border-top: 1px solid #ccc;
+    .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:nth-child(1) {
+            // background-color: pink;
+        }
+        img {
+            width: .52rem;
+            height: .546667rem;
+        }
+        p {
+            font-size: .293333rem;
+            color: #666666;
+            margin-top: .133333rem;
+        }
+    }
+}
